@@ -34,7 +34,8 @@
             <div class="row">
                 <div class="col-md-6">
                     <label class="form-label" for="payment-parcel">Parcelamento</label>
-                    <select id="payment-parcel" class="form-select" [(ngModel)]="selectedParcelOption">
+                    <select id="payment-parcel" class="form-select" [(ngModel)]="selectedParcelOption"
+                        (ngModelChange)="updateParcel()">
                         <option *ngFor="let parcelOption of parcelOptions" [value]="parcelOption.value">
                             {{parcelOption.display}}
                         </option>
